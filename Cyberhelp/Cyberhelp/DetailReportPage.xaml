@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cyberhelp.DetailReportPage"
+             BackgroundColor="#01579b"
+             Title="Descrição do Relato">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label x:Name="labelTitle" Text="Título" Margin="10,25,10,0" FontSize="Medium"
+               TextColor="AliceBlue"/>
+            <Label x:Name="labelDescription" Text="Descrição" TextColor="AliceBlue"
+                   Margin="10,10,10,170" FontSize="Medium"/>
+            <ListView x:Name="listAnswers" HasUnevenRows="True" SeparatorVisibility="None"
+                      ItemSelected="listAnswers_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Font="Medium" HorizontalOptions="End" 
+                                   TextColor="#00b0ff" Text="{Binding ReportAnswerDate}"/>
+                                <Label x:Name="labelAnswer" Font="Large" Text="{Binding Answer}" 
+                                   TextColor="AliceBlue" Margin="10,5,10,5"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="entryAnswer" Keyboard="Chat" Placeholder="Digite sua resposta"
+                   PlaceholderColor="#9FB6CD" Margin="10,15,3,5" FontSize="Medium"
+                   TextColor="AliceBlue" WidthRequest="245"/>
+                <Button x:Name="btnSendAnswer" Style="{StaticResource StyleButtonEnter}"
+                    Text="ENVIAR" TextColor="AliceBlue" Margin="0,15,10,5"
+                    Clicked="btnSendAnswer_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

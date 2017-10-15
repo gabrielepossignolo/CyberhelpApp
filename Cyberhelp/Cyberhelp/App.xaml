@@ -4,7 +4,17 @@
              x:Class="Cyberhelp.App">
 	<Application.Resources>
 
-		<!-- Application resource dictionary -->
+        <ResourceDictionary>
 
-	</Application.Resources>
+            <Style x:Key="StyleButtonEnter" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#26c6da" />
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+
+    </Application.Resources>
 </Application>

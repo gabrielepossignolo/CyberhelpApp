@@ -2,12 +2,50 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Cyberhelp"
-             x:Class="Cyberhelp.MainPage">
+             x:Class="Cyberhelp.MainPage"
+             BackgroundColor="#01579b">
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <Image Grid.Row="0" Source="c.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="10,30,10,20"/>
+                <Image x:Name="imageHelp" Source="icon.png" HorizontalOptions="EndAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="labelSwitchVictim" Text="Vítima de Bullying" TextColor="AliceBlue"
+                    HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+                   Margin="10,10,0,10" Font="Large"/>
+                <Switch VerticalOptions="StartAndExpand" 
+                        HorizontalOptions="CenterAndExpand" Margin="0,12,0,0"                
+                        IsToggled="False"/>
+                <Label x:Name="labelSwitchPsychologist" Text="Psicólogo" TextColor="AliceBlue"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+                   Margin="0,10,0,10" Font="Large"/>
+                <Switch VerticalOptions="StartAndExpand" 
+                        HorizontalOptions="CenterAndExpand" Margin="0,12,0,0"
+                        IsToggled="False"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Entry x:Name="entryEmail" Margin="10,0,10,0" TextColor="AliceBlue" Placeholder="E-mail"  PlaceholderColor="#9FB6CD" Keyboard="Email"/>
+
+                <Entry x:Name="entryPassword" TextColor="AliceBlue" Margin="10,0,10,0" Placeholder="Senha"  PlaceholderColor="#9FB6CD" IsPassword="True"/>
+
+                <Button x:Name="btnEnter" Text="ENTRAR" TextColor="AliceBlue" Margin="10,5,10,0" Style="{StaticResource StyleButtonEnter}"
+                 Clicked="btnEnter_OnClicked"/>
+
+                <Label x:Name="labelForgetPassword" Text="Esqueceu a senha?" TextColor="AliceBlue" Margin="0,7,0,0" 
+               HorizontalTextAlignment="Center"/>
+
+                <Label x:Name="labelSigUp" Text="Cadastrar-se" TextColor="AliceBlue" Margin="0,7,0,0" 
+               HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

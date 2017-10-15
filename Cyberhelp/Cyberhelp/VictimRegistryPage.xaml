@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cyberhelp.VictimRegistryPage"
+             BackgroundColor="#0277bd"
+             Title="Cadastro - Vítima de Bullying">
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Entry x:Name="entryNameVictim" TextColor="AliceBlue" Margin="10,35,10,5" Placeholder="Nickname" PlaceholderColor="#9FB6CD"/>
+
+            <Entry x:Name="entryAge" TextColor="AliceBlue" Margin="10,20,10,5" Placeholder="Idade" PlaceholderColor="#9FB6CD" Keyboard="Telephone"/>
+
+            <Entry x:Name="entryState" TextColor="AliceBlue" Margin="10,20,10,5" Placeholder="Estado" PlaceholderColor="#9FB6CD"/>
+
+            <Entry x:Name="entryEmailVR" TextColor="AliceBlue" Margin="10,20,10,5" Placeholder="E-mail" PlaceholderColor="#9FB6CD" Keyboard="Email"/>
+
+            <Entry x:Name="entryPasswordVR" TextColor="AliceBlue" Margin="10,20,10,5" Placeholder="Senha" PlaceholderColor="#9FB6CD" IsPassword="True"/>
+
+            <Button x:Name="btnVictimRegistry" Text="CADASTRAR" TextColor="AliceBlue" Margin="10,35,10,0" Style="{StaticResource StyleButtonEnter}"
+                     Clicked="btnVictimRegistry_Clicked"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
