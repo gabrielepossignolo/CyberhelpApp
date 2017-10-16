@@ -72,7 +72,6 @@
     <Compile Include="ReportPageMaster.xaml.cs">
       <DependentUpon>ReportPageMaster.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReportPageMenuItem.cs" />
     <Compile Include="VictimRegistryPage.xaml.cs">
       <DependentUpon>VictimRegistryPage.xaml</DependentUpon>
     </Compile>

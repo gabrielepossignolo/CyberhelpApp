@@ -2,44 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyberhelp.ReportPageMaster"
-             Title="Master">
-  <StackLayout>
-    <ListView x:Name="MenuItemsListView"
-              SeparatorVisibility="None"
-              HasUnevenRows="true"
-              ItemsSource="{Binding MenuItems}">
-      <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-          </Grid.RowDefinitions>
-          <Label
-              Grid.Column="1"
-              Grid.Row="2"
-              Text="AppName"
-              Style="{DynamicResource SubtitleStyle}"/>
-        </Grid>
-      </ListView.Header>
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
-              <Label VerticalOptions="FillAndExpand" 
-                    VerticalTextAlignment="Center" 
-                    Text="{Binding Title}" 
-                    FontSize="24"/>
-            </StackLayout>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+             Title="Master"
+             BackgroundColor="#03a9f4"
+             Icon="menu.png">
+    <StackLayout>
+
+        <StackLayout>
+            <Button x:Name="btnChangeData" Text="Alterar Dados" BackgroundColor="#4fc3f7"
+                TextColor="AliceBlue" FontSize="Medium" Margin="0,230,0,0"/>
+            <Button x:Name="btnMyReports" Text="Meus Relatos" BackgroundColor="#4fc3f7" 
+                TextColor="AliceBlue" FontSize="Medium" Margin="0,15,0,0"/>
+            <Button x:Name="btnAbout" Text="Sobre" BackgroundColor="#4fc3f7"
+                TextColor="AliceBlue" FontSize="Medium" Margin="0,15,0,0"/>
+            <Button x:Name="btnExit" Text="Sair" BackgroundColor="#4fc3f7" 
+                TextColor="AliceBlue" FontSize="Medium" Margin="0,15,0,0"/>
+        </StackLayout>
+    </StackLayout>
+    
 </ContentPage>

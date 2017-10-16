@@ -2,8 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyberhelp.ReportPageDetail"
-             Title="Detail">
-  <StackLayout Padding="10">
-    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+             Title="Relatos"
+             BackgroundColor="#0277bd">
+
+    <StackLayout>
+        <SearchBar x:Name="searchSearch" Placeholder="Pesquisar" PlaceholderColor="#9FB6CD"
+                   TextColor="AliceBlue"></SearchBar>
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+        <ListView x:Name="listReports"
+                  ItemsSource="{Binding showList}"
+                  HasUnevenRows="True"
+                  IsGroupingEnabled="true" 
+                  GroupDisplayBinding="{Binding Key}"                      
+                  SeparatorVisibility="None"
+                  SeparatorColor="AliceBlue"
+                  Margin="10,0,10,0"                  
+                  ItemSelected="listReports_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Font="Medium" HorizontalOptions="End" Margin="10,10,10,2"
+                                   TextColor="#e3f2fd" Text="{Binding DatePublicationReport}"/>
+                            <Label Font="Medium" LineBreakMode="TailTruncation"
+                                   TextColor="#e3f2fd" Text="{Binding ReportTitle}"/>
+                            <Label Font="Medium" LineBreakMode="TailTruncation" 
+                                   TextColor="#e1f5fe" Text="{Binding ReportDescription}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
 </ContentPage>

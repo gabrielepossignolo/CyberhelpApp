@@ -2,15 +2,8 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyberhelp.ReportPage"
-             xmlns:pages="clr-namespace:Cyberhelp">
-  <MasterDetailPage.Master>
-    <pages:ReportPageMaster x:Name="MasterPage" />
-  </MasterDetailPage.Master>
-  <MasterDetailPage.Detail>
-    <NavigationPage>
-      <x:Arguments>
-        <pages:ReportPageDetail />
-      </x:Arguments>
-    </NavigationPage>
-  </MasterDetailPage.Detail>
+             xmlns:pages="clr-namespace:Cyberhelp"
+             xmlns:controls="clr-namespace:Cyberhelp.Controls; assembly:Cyberhelp"
+             NavigationPage.HasNavigationBar="False">
+  
 </MasterDetailPage>

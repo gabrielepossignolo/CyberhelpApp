@@ -15,10 +15,14 @@ namespace Cyberhelp
         public ReportPage()
         {
             InitializeComponent();
-            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            //MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+
+            this.Master = new ReportPageMaster();
+            this.Detail = new NavigationPage(new ReportPageDetail());
+            App.MasterDetail = this;
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        /*private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as ReportPageMenuItem;
             if (item == null)
@@ -31,6 +35,6 @@ namespace Cyberhelp
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;
-        }
+        }*/
     }
 }
