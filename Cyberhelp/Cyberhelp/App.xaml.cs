@@ -11,7 +11,7 @@ namespace Cyberhelp
 {
     public partial class App : Application
     {
-        public static MasterDetailPage MasterDetail { get; set; }
+        public static MasterDetailPage MasterDetail { get; set; }        
 
         public async static Task NavigateMasterDetail(Page page)
         {

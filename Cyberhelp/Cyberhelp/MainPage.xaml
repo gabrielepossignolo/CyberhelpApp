@@ -8,8 +8,8 @@
 
         <StackLayout>
             <StackLayout>
-                <Image Grid.Row="0" Source="c.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="10,30,10,20"/>
-                <Image x:Name="imageHelp" Source="icon.png" HorizontalOptions="EndAndExpand"
+                <Image Grid.Row="0" Source="icon.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="10,30,10,20"/>
+                <Image x:Name="imageHelp" Source="help.png" HorizontalOptions="EndAndExpand"
                    VerticalOptions="CenterAndExpand"/>
 
             </StackLayout>

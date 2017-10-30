@@ -24,7 +24,7 @@ namespace Cyberhelp
         {
             InitializeComponent();
 
-            ToolbarItems.Add(new ToolbarItem("Add", "icon.png", () =>
+            ToolbarItems.Add(new ToolbarItem("Add", "add_report.png", () =>
             {
                 //Navigation?.PushModalAsync(new NavigationPage(new PublishReportPage()));
                 Navigation?.PushAsync(new PublishReportPage(), false);

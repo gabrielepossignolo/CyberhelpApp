@@ -16,14 +16,14 @@ namespace Cyberhelp
         {
             InitializeComponent();
 
-            var image = new Image
+            /*var image = new Image
             {
                 Source = ImageSource.FromResource("icon.png"),
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.Start,
+                HorizontalOptions = LayoutOptions.Start
             };
 
-            Content = image;
+            Content = image;*/
 
         }
     }

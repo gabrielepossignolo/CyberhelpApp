@@ -2,8 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyberhelp.AboutPage"
-             Title="SObre"
+             Title="Sobre"
              BackgroundColor="#01579b">
 
-    
+    <StackLayout>
+
+        <Image Source="icon.png"/>
+        <Label Text="FALTA O TEXTO" TextColor="AliceBlue" VerticalOptions="StartAndExpand" HorizontalOptions="Start"/>
+    </StackLayout>
 </ContentPage>
