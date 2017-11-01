@@ -24,6 +24,11 @@ namespace Cyberhelp
             {
                 await App.NavigateMasterDetail(new AboutPage());
             };
+
+            btnMyReports.Clicked += async (sender, e) =>
+            {
+                await App.NavigateMasterDetail(new MyReportsPage());
+            };
         }
 
         

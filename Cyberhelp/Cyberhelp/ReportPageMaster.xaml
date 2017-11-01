@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cyberhelp.ReportPageMaster"
              Title="Master"
-             BackgroundColor="#03a9f4"
+             BackgroundColor="#01579b"
              Icon="menu.png">
     <StackLayout>
 
