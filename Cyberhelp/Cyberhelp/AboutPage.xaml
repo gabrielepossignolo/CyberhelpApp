@@ -7,7 +7,20 @@
 
     <StackLayout>
 
-        <Image Source="icon.png"/>
-        <Label Text="FALTA O TEXTO" TextColor="AliceBlue" VerticalOptions="StartAndExpand" HorizontalOptions="Start"/>
+        <Label Text="DESCRIÇÃO" TextColor="#b3e5fc" VerticalOptions="StartAndExpand" HorizontalOptions="Start" FontSize="Medium" Margin="10,30,10,0"/>
+        <Label Text="Projeto desenvolvido para o Trabalho de Conclusão de Curso da Fatec Americana" TextColor="AliceBlue" VerticalOptions="StartAndExpand" HorizontalOptions="Start"
+               Margin="10,0,10,0" FontSize="Medium"/>
+        <Label Text="DESENVOLVEDORA" TextColor="#b3e5fc" VerticalOptions="StartAndExpand" HorizontalOptions="Start" FontSize="Medium" Margin="10,0,10,0  "/>
+        
+        <StackLayout Orientation="Horizontal">
+            <Image Source="icon.png" Margin="10,10,10,10"/>
+            <Label Text="Meu nome é Gabriele Possignolo, tenho 20 anos, sou programadora e desenvolvi este aplicativo com o intuito de auxiliar as vítimas de bullying a passarem pelos traumas causados pelas agressões física e psicológicas sofridas. Espero que o Cyberhelp possa fazer a diferença na vida de alguém!" 
+                   TextColor="AliceBlue" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="10,10,10,10" FontSize="Medium"/>            
+        </StackLayout>
+
+        <Label Text="E-MAIL PARA CONTATO" TextColor="#b3e5fc" VerticalOptions="StartAndExpand" HorizontalOptions="Start" FontSize="Medium" Margin="10,0,10,0"/>
+        <Label Text="gabi_possignolo@hotmail.com" TextColor="AliceBlue" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="10,0,10,0" FontSize="Medium"/>
+        <Label Text="ORIENTADOR" TextColor="#b3e5fc" VerticalOptions="StartAndExpand" HorizontalOptions="Start" FontSize="Medium" Margin="10,0,10,0"/>
+        <Label Text="Kléber Andrade" TextColor="AliceBlue" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="10,0,10,0" FontSize="Medium"/>        
     </StackLayout>
 </ContentPage>

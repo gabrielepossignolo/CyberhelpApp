@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cyberhelp.ChangePsychologistDataPage">
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+            <Entry x:Name="entryChangeName" TextColor="AliceBlue" Margin="10,35,10,5" Placeholder="Nome Completo" PlaceholderColor="#9FB6CD"/>
+
+            <Entry x:Name="entryChangeCity" TextColor="AliceBlue" Margin="10,10,10,5" Placeholder="Cidade" PlaceholderColor="#9FB6CD"/>
+
+            <Entry x:Name="entryChangePhone" TextColor="AliceBlue" Margin="10,10,10,5" Placeholder="(XX) XXXX-XXXX" PlaceholderColor="#9FB6CD" Keyboard="Telephone"/>
+
+            <Entry x:Name="entryChangeCRP" TextColor="AliceBlue" Margin="10,10,10,5" Placeholder="CRP" PlaceholderColor="#9FB6CD"/>
+
+            <Entry x:Name="entryChangeEmailPR" TextColor="AliceBlue" Margin="10,10,10,5" Placeholder="E-mail" PlaceholderColor="#9FB6CD" Keyboard="Email"/>
+
+            <Entry x:Name="entryChangePasswordPR" TextColor="AliceBlue" Margin="10,10,10,0" Placeholder="Senha" PlaceholderColor="#9FB6CD" IsPassword="True"/>
+
+            <Button x:Name="btnChangeDataPR" Text="ALTERAR DADOS" TextColor="AliceBlue" Margin="10,30,10,0" Style="{StaticResource StyleButtonEnter}"
+                    Clicked="btnChangeDataPR_Clicked"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

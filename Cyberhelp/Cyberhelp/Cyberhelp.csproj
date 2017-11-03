@@ -41,15 +41,24 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangePsychologistDataPage.xaml.cs">
+      <DependentUpon>ChangePsychologistDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeVictimDataPage.xaml.cs">
+      <DependentUpon>ChangeVictimDataPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Constants.cs" />
+    <Compile Include="Controls\Report.cs" />
+    <Compile Include="Controls\ReportManager.cs" />
     <Compile Include="Controls\TagAnswer.cs" />
-    <Compile Include="Controls\TodoItem.cs" />
-    <Compile Include="Controls\TodoItemManager.cs" />
     <Compile Include="DetailReportPage.xaml.cs">
       <DependentUpon>DetailReportPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ForgetPasswordPage.xaml.cs">
       <DependentUpon>ForgetPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -193,6 +202,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyReportsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChangePsychologistDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChangeVictimDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HelpPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

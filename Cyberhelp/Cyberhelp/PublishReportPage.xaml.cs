@@ -14,36 +14,43 @@ namespace Cyberhelp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PublishReportPage : ContentPage
     {
-        public static MobileServiceClient MobileService =
-            new MobileServiceClient("https://cyberhelpapp.azurewebsites.net");
-        //public static IMobileServiceTable<TodoItem> myListReport;
-        //public List<TodoItem> myListReport;
+
+        private ReportManager manager;
 
         public PublishReportPage()
         {
             InitializeComponent();
+
+            manager = new ReportManager();
         }
 
-        public async Task btnPublishStory_ClickedAsync(object sender, EventArgs e)
-       {
-           //Navigation?.PushModalAsync(new NavigationPage(new DetailsReportPage()));
-           //Navigation?.PushAsync(new DetailsReportPage(), false);
-           // TodoItem item = new TodoItem { ReportTitle = storyTitle.Text, ReportDescription = storyDescription.Text };
-
-           TodoItem item = new TodoItem { ReportTitle = storyTitle.Text, ReportDescription = storyDescription.Text };
-           await MobileService.GetTable<TodoItem>().InsertAsync(item);
-
-       }
-
-        /*public void OnAdd(object sender, EventArgs e)
+        async Task AddNewReport(Report report)
         {
-
-        }*/
-
-        // Event handlers
-        public void OnSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-
+            Report reportResponse = await manager.SaveGetUserAsync(report);
+            Application.Current.Properties["user"] = reportResponse;
         }
+
+        public async void OnAdd(Object sender, EventArgs e)
+        {
+
+            string title = storyTitle.Text;
+            string description = storyDescription.Text;
+
+            if (!string.IsNullOrEmpty(title) && !!string.IsNullOrEmpty(description))
+            {
+
+                var report = new Report
+                {
+                    title = title,
+                    description = description
+                };
+
+                await AddNewReport(report);
+                await Navigation.PushModalAsync(new ReportPageDetail());
+                await Navigation.PopAsync();
+            }
+        }
+
+        
     }
-}
+}   

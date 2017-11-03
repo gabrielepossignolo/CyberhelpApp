@@ -16,9 +16,9 @@ namespace Cyberhelp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReportPageDetail : ContentPage
     {
-        //IMobileServiceSyncTable<TodoItem> itemsTable; 
-        private List<TodoItem> myListReport;
-
+        private Report currentReport;
+        private List<Report> reportList;
+        private ReportManager reportManager;
 
         public ReportPageDetail()
         {
@@ -30,51 +30,38 @@ namespace Cyberhelp
                 Navigation?.PushAsync(new PublishReportPage(), false);
             }));
 
-            this.myListReport = new List<TodoItem>();
+            currentReport = (Report)Application.Current.Properties["user"];
 
+            reportList = new List<Report>();
+            reportManager = new ReportManager();
 
+            reportListView.ItemTemplate = new DataTemplate(typeof(DetailReportPage));
 
-            /*for (var i = 0; i <=20; i++)
+            LoadReport();
+        }      
+
+        private async void LoadReport()
+        {
+            reportList = await reportManager.ListReportWhere(reportSelect => reportSelect.id != currentReport.id);
+
+            if (reportList.Count != 0)
             {
-                this.myListReport.Add(new TodoItem { ReportTitle = $"TestTitle{i}", ReportDescription = $"TestDesc{i}"});
-            }*/
-
-            this.searchSearch.TextChanged += SearchSearch_TextChanged; ;
-            this.listReports.ItemsSource = this.showList();
+                reportListView.ItemsSource = reportList;
+            }
         }
 
-        private void SearchSearch_TextChanged(object sender, TextChangedEventArgs e)
+        private void OnSearch(Object sender, TextChangedEventArgs e)
         {
-            this.listReports.ItemsSource = this.showList(this.searchSearch.Text);
+            if (!string.IsNullOrWhiteSpace(e.NewTextValue))
+            {
+                reportListView.ItemsSource = reportList.Where(reportSelect => reportSelect.title.ToLower().Contains(e.NewTextValue.ToLower())
+                    || reportSelect.description.ToLower().Contains(e.NewTextValue.ToLower()));
+            }
+            else
+            {
+                reportListView.ItemsSource = reportList;
+            }
         }
-
-        public IEnumerable<MyListReport<string, TodoItem>> showList(string filter = "")
-        {
-            IEnumerable<TodoItem> listFilter = this.myListReport;
-
-            if (!string.IsNullOrEmpty(filter))
-                listFilter = this.myListReport.Where(l => (l.ReportTitle.ToLower().Contains(filter.ToLower())) ||
-                    l.ReportDescription.ToLower().Contains(filter.ToLower()));
-
-            return from list in listFilter
-                   group list by list.ReportTitle into groups
-                   select new MyListReport<string, TodoItem>(groups.Key, groups);
-        }
-
-        private void listReports_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            //var item = e.SelectedItem; 
-            Navigation?.PushModalAsync(new NavigationPage(new DetailReportPage()));
-
-        }
-
-        /*public async Task<IEnumerable<TodoItem>> GetItemsAsync(bool forceRefresh = false)
-        {
-
-            return await itemsTable.ToEnumerableAsync();
-                
-
-        }*/
 
     }
 }
