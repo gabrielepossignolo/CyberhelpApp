@@ -54,7 +54,8 @@ namespace Cyberhelp.Controls
 
             try
             {
-                List<Report> newReport = await reportTable.Where(reportSelect => reportSelect.username == report.username).ToListAsync();
+                List<Report> newReport = await reportTable.Where(reportSelect => reportSelect.title == report.title && 
+                reportSelect.description == report.description).ToListAsync();
                 return newReport.First();
             }
             catch (MobileServiceInvalidOperationException msioe)

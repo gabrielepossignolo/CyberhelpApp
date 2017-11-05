@@ -49,8 +49,6 @@ namespace Cyberhelp
                 await Navigation.PushModalAsync(new ReportPageDetail());
                 await Navigation.PopAsync();
             }
-        }
-
-        
+        }        
     }
 }   
