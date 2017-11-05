@@ -41,7 +41,7 @@ namespace Cyberhelp.Controls
             return null;
         }
 
-        public async Task<Report> SaveGetUserAsync(Report report)
+        public async Task<Report> SaveGetReportAsync(Report report)
         {
             if (report.id == null)
             {

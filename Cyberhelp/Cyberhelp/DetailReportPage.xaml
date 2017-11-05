@@ -11,8 +11,7 @@
                TextColor="AliceBlue"/>
             <Label x:Name="labelDescription" Text="Descrição" TextColor="AliceBlue"
                    Margin="10,10,10,170" FontSize="Medium"/>
-            <ListView x:Name="listAnswers" HasUnevenRows="True" SeparatorVisibility="None"
-                      ItemSelected="listAnswers_ItemSelected">
+            <ListView x:Name="listAnswers" HasUnevenRows="True" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -32,7 +31,7 @@
                    TextColor="AliceBlue" WidthRequest="245"/>
                 <Button x:Name="btnSendAnswer" Style="{StaticResource StyleButtonEnter}"
                     Text="ENVIAR" TextColor="AliceBlue" Margin="0,15,10,5"
-                    Clicked="btnSendAnswer_Clicked"/>
+                    />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

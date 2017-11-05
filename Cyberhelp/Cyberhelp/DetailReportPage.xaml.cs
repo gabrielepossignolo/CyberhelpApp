@@ -25,12 +25,12 @@ namespace Cyberhelp
                 Navigation?.PushAsync(new PsychologistRegistryPage(), false);
             }));
 
-            ListItems = new ObservableCollection<TagAnswer>();
-            listAnswers.ItemsSource = ListItems;
+           //ListItems = new ObservableCollection<TagAnswer>();
+           //istAnswers.ItemsSource = ListItems;
         }
 
 
-        private void btnSendAnswer_Clicked(object sender, EventArgs e)
+       /* private void btnSendAnswer_Clicked(object sender, EventArgs e)
         {
             ListItems.Add(new TagAnswer { Answer = entryAnswer.Text });
             entryAnswer.Text = "";
@@ -46,6 +46,6 @@ namespace Cyberhelp
         {
             title = labelTitle.Text;
             description = labelDescription.Text;
-        }
+        }*/
     }
 }

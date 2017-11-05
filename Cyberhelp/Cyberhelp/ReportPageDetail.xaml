@@ -12,7 +12,8 @@
                   RowHeight="100" BackgroundColor="#039be5"                                      
                   SeparatorVisibility="None"
                   SeparatorColor="AliceBlue"
-                  IsPullToRefreshEnabled="True"/>       
+                  IsPullToRefreshEnabled="True"
+                  />       
 
 
     </StackLayout>

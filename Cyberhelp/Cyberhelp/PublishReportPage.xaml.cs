@@ -26,8 +26,8 @@ namespace Cyberhelp
 
         async Task AddNewReport(Report report)
         {
-            Report reportResponse = await manager.SaveGetUserAsync(report);
-            Application.Current.Properties["user"] = reportResponse;
+            Report reportResponse = await manager.SaveGetReportAsync(report);
+            Application.Current.Properties["report"] = reportResponse;
         }
 
         public async void OnAdd(Object sender, EventArgs e)

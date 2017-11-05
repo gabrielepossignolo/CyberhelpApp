@@ -30,7 +30,7 @@ namespace Cyberhelp
                 Navigation?.PushAsync(new PublishReportPage(), false);
             }));
 
-            currentReport = (Report)Application.Current.Properties["user"];
+            currentReport = (Report)Application.Current.Properties["report"];           
 
             reportList = new List<Report>();
             reportManager = new ReportManager();
@@ -42,7 +42,9 @@ namespace Cyberhelp
 
         private async void LoadReport()
         {
-            reportList = await reportManager.ListReportWhere(reportSelect => reportSelect.id != currentReport.id);
+           
+            reportList = await reportManager.ListReportWhere(reportSelect => reportSelect.title != currentReport.title &&
+            reportSelect.description != currentReport.description);
 
             if (reportList.Count != 0)
             {
